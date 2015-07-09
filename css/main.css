@@ -7,7 +7,6 @@ body {
 }
 #portfolio .portfolio-item {
 	position: relative;
-	display: block;
 	float: left;
 	width: 200px;
 	height: 200px;
@@ -16,23 +15,34 @@ body {
 #portfolio .portfolio-item .primary,
 #portfolio .portfolio-item .secondary {
 	position: absolute;
-	display: block;
+	top: 0;
+	left: 0;
 	width: 200px;
 	height: 200px;
 	background: #CCC;
 	border-radius: 10px;
-	overflow: hidden;
-}
 
-/*.primary:hover{
-  visibility: hidden;
-  -webkit-transform: rotateY(0deg);
+  -webkit-backface-visibility: hidden;
+    			backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 1s;
+      		transition: transform 1s;
+}
+#portfolio .portfolio-item .secondary {
+	padding: 20px;
+	width: 160px;
+	height: 160px;
 }
 .secondary{
-  opacity: 0;
+	-webkit-transform: rotateY(-180deg);
+					transform: rotateY(-180deg);
 }
-.secondary:hover{
-  visibility: visible;
-  opacity: 100;
+
+.portfolio-item:hover .primary{
   -webkit-transform: rotateY(-180deg);
-  }/* add your styles here */
+	transform: rotateY(-180deg);
+}
+
+.portfolio-item:hover .secondary{
+  -webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+  }
