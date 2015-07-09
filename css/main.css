@@ -1,1 +1,38 @@
-/* add your styles here */
+body {
+	margin: 0;
+	padding: 40px;
+	background: #EFEFEF;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+#portfolio .portfolio-item {
+	position: relative;
+	display: block;
+	float: left;
+	width: 200px;
+	height: 200px;
+	margin: 10px;
+}
+#portfolio .portfolio-item .primary,
+#portfolio .portfolio-item .secondary {
+	position: absolute;
+	display: block;
+	width: 200px;
+	height: 200px;
+	background: #CCC;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+/*.primary:hover{
+  visibility: hidden;
+  -webkit-transform: rotateY(0deg);
+}
+.secondary{
+  opacity: 0;
+}
+.secondary:hover{
+  visibility: visible;
+  opacity: 100;
+  -webkit-transform: rotateY(-180deg);
+  }/* add your styles here */

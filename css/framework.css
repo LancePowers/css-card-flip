@@ -15,6 +15,7 @@ body {
 }
 
 #portfolio .portfolio-item {
+	position: relative;
 	display: block;
 	float: left;
 	width: 200px;
@@ -25,11 +26,13 @@ body {
 
 #portfolio .portfolio-item .primary,
 #portfolio .portfolio-item .secondary {
+	position: absolute;
 	display: block;
 	width: 200px;
 	height: 200px;
 	background: #CCC;
 	-webkit-transform-style: preserve-3d;
+	transition: .5s;
 	-webkit-backface-visibility: hidden;
 	border-radius: 10px;
 	overflow: hidden;
@@ -39,6 +42,8 @@ body {
 	padding: 20px;
 	width: 160px;
 	height: 160px;
+	visibility: hidden;
+
 }
 
 #portfolio .portfolio-item .secondary h2 {
